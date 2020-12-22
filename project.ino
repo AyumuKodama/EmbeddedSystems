@@ -24,12 +24,12 @@ void setup() {
   pinMode(buzzer, OUTPUT); //turns alarm buzzer on
   pinMode(ledPin, OUTPUT); //turns alarm LED on
   bme.begin(0x76);         //turns BME sensor on
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);   //turns sensor on
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);   //turns display on
   display.display();
   delay(2000);
   display.clearDisplay();
-  setTime(8,14,0,12,22,20);         //sets clock time
-  Alarm.alarmRepeat(8,15,0,alarm);  //sets up alarm
+  setTime(8,14,0,12,22,20);         //sets clock time at 8:14AM, 12/22/2020
+  Alarm.alarmRepeat(8,15,0,alarm);  //sets up alarm at 8:15AM
   Alarm.timerRepeat(15,repeat);     //sets up alarm so it repeats every 15 seconds
 }
 
